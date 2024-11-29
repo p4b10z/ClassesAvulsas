@@ -3,11 +3,11 @@ package Capitulo_10;
 public class payRollSystemTest {
 	public static void main(String[] args) {
 		// cria objetos de subclasse
-		SalaryEmployee salariedEmployee = new SalaryEmployee("John", "Smith", "111-11-1111", 800.00);
-		HourlyEmployee hourlyEmployee = new HourlyEmployee("Karen", "Price", "222-22-2222", 16.75, 40);
-		CommisionEmployee commissionEmployee = new CommisionEmployee("Sue", "Jones", "333-33-3333", 10000, 0.06);
+		SalaryEmployee salariedEmployee = new SalaryEmployee("John", "Smith", "111-11-1111", 800.00,new Date(5, 15, 1980));
+		HourlyEmployee hourlyEmployee = new HourlyEmployee("Karen", "Price", "222-22-2222", 16.75, 40, new Date(5, 15, 1980),new Date(5, 15, 1980));
+		CommisionEmployee commissionEmployee = new CommisionEmployee("Sue", "Jones", "333-33-3333", 10000, 0.06,new Date(5, 15, 1980));
 		BasePlusCommisionEmployee basePlusCommissionEmployee = new BasePlusCommisionEmployee("Bob", "Lewis",
-				"444-44-4444", 5000, 0.04, 300);
+				"444-44-4444", 5000, 0.04, 300, new Date(5, 15, 1980));
 
 		System.out.println("Employees processed individually:");
 

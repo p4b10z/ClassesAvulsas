@@ -4,8 +4,8 @@ public class BasePlusCommisionEmployee extends CommisionEmployee{
      private double baseSalary; // salario de base semanal
      
      public BasePlusCommisionEmployee(String firstName, String lastName, String socialSecurityNumber, double grossSales,
- 			double commissionRate, double baseSalary) {
-    	 super(firstName, lastName, socialSecurityNumber, grossSales, commissionRate);
+ 			double commissionRate, double baseSalary, Date birthDate) {
+    	 super(firstName, lastName, socialSecurityNumber, grossSales, commissionRate, birthDate);
     	 
     	 if(baseSalary < 0.0)
     		 throw new IllegalArgumentException("o salario de base não pode ser 0");

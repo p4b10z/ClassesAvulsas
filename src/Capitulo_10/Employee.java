@@ -2,15 +2,17 @@ package Capitulo_10;
 
 //declaração de classes abstratas
 public abstract class Employee implements payable {
+	   private Date birthDate ; 
        private final String FirstName ; 
        private final String LastName ; 
        private final String SocialSecurityNumber ; 
    
        //contrutor 
-       public Employee(String FirstName, String LastName, String SocialSecurityNumber) {
+       public Employee(String FirstName, String LastName, String SocialSecurityNumber, Date birDate) {
     	   this.FirstName = FirstName ; 
     	   this.LastName = LastName ;
     	   this.SocialSecurityNumber = SocialSecurityNumber ; 
+    	   this.birthDate = birDate ; 
        }
        
        //metodos get 

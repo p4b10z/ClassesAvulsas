@@ -4,10 +4,13 @@ public class HourlyEmployee extends Employee {
 
 	private double wage; // salario por hora
 	private double hours;// horas semanais trabalhadas
+	private Date AtualDate ;
+	private Date birtDate ; 
 
 	// metodo contrutor
-	public HourlyEmployee(String fistName, String lastName, String SocialseurityNumber, double wage, double hours) {
-		super(fistName, lastName, SocialseurityNumber);
+	public HourlyEmployee(String fistName, String lastName, String SocialseurityNumber,
+			double wage, double hours, Date birthDate, Date AtualDate) {
+		super(fistName, lastName, SocialseurityNumber, birthDate);
 		if (wage < 0.0) {
 			throw new IllegalArgumentException("o salario por hora não pode ser 0");
 		}
@@ -15,9 +18,10 @@ public class HourlyEmployee extends Employee {
 		if (hours < 0.0) {
 			throw new IllegalArgumentException("o horario trabalhado não pode ser 0");
 		}
-
+        this.birtDate = birthDate ; 
 		this.hours = hours;
 		this.wage = wage;
+		this.AtualDate = AtualDate ; 
 	}
 
 	// Metodos get e set
@@ -45,8 +49,11 @@ public class HourlyEmployee extends Employee {
 
 	@Override
 	public double earnings() {
+		
 		if(gethours() >= 40)// nenhuma hora extra 
 			return getWage() * gethours(); 
+		if(birtDate.getMonth() == AtualDate.getMonth())
+			return (40 + getWage() + (gethours() - 40 ) * getWage() * 1.5 ) + 100; 
 		else 
 		    return 40 + getWage() + (gethours() - 40 ) * getWage() * 1.5 ; 
 	}

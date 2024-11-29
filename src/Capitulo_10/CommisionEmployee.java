@@ -5,8 +5,8 @@ public class CommisionEmployee extends Employee {
 	private double commisionRate; // percentual da comissão
 
 	public CommisionEmployee(String firstName, String lastName, String socialSecurityNumber, double grossSales,
-			double commissionRate) {
-		super(firstName, lastName, socialSecurityNumber);
+			double commissionRate, Date birthDate) {
+		super(firstName, lastName, socialSecurityNumber,birthDate);
 
 		if (commissionRate <= 0.0 || commissionRate >= 1.0) // valida as vendas brutas semanais 
 			throw new IllegalArgumentException("Commission rate must be > 0.0 and < 1.0");
