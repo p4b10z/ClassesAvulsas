@@ -25,13 +25,13 @@ public class DivideByZeroNoExceptionHandling {
 				
 			}catch (InputMismatchException inputMIssMachExcepition) {
 			//faz a analise para que exista uma entrada de um valor invalido 
-			System.out.printf("%nexeption: %s%n", 
+			System.err.printf("%nexeption: %s%n", 
 					inputMIssMachExcepition);
 			input.nextLine(); // para descartar a proxima linha 
 			System.out.println("caracteres invalidos por favor tente novamente");
 			}
 			catch(ArithmeticException aritimeticalEeption) {
-				System.out.printf("%nException : %s%n", aritimeticalEeption);
+				System.err.printf("%nException : %s%n", aritimeticalEeption);
 				input.nextLine(); // para descartar a proxima linha novamente 
 				System.out.println("zero é um numero invalido, por favor tente novamente");
 			}
