@@ -6,6 +6,10 @@ public class usuario_1 {
 
 	
 	String nome ;
+	
+	public usuario_1(String nome) {
+		this.nome = nome;
+	}
 
 	@Override
 	public int hashCode() {
@@ -24,5 +28,9 @@ public class usuario_1 {
 		return Objects.equals(nome, other.nome);
 	} 
 	
+	@Override
+	public String toString() {
+		return String.format(nome);
+	}
 	
 }

@@ -2,6 +2,8 @@ package Revisitando_Array;
 
 import java.util.HashSet;
 import java.util.Set;
+import java.util.SortedSet;
+import java.util.TreeSet;
 
 public class conjuntoBagunçado {
 	@SuppressWarnings({ "unchecked", "rawtypes" })
@@ -21,6 +23,12 @@ public class conjuntoBagunçado {
 
 		System.out.println(conjunto.contains('x'));
 		
+		SortedSet<String>nomes = new TreeSet<>();
+		nomes.add("ana");
+		nomes.add("dados homogeneos");
+		nomes.add("generics");
+		
+		System.out.println(nomes);
 		
 		
 		Set nums = new HashSet(); 
